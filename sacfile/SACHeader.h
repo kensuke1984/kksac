@@ -1,8 +1,9 @@
 /*
  * SACHeader.h
  *
- *  Created on: 2019/11/18
- *Author: kensuke
+ * Created on: 2019/11/18
+ * Author: kensuke
+ * version 0.0.1
  */
 
 #ifndef SACHEADER_H_
@@ -727,8 +728,11 @@ protected:
 public:
     SACHeader(std::string);
     double getDelta();
-    double getValue();
-    int getInt();
+    double getValue(header);
+    bool getBoolean(header);
+    int getEnumerated(header);
+    int getInt(header);
+    std::string getString(header);
     virtual ~SACHeader();
 };
 

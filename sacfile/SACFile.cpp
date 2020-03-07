@@ -1,8 +1,9 @@
 /*
  * SACFile.cpp
  *
- *  Created on: 2019/11/15
- *      Author: kensuke
+ * Created on: 2019/11/15
+ * Author: kensuke
+ * version 0.0.1
  */
 
 #include "SACFile.h"
