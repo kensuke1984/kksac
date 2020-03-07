@@ -7,7 +7,7 @@
  */
 
 #include <iostream>
-#include "SACFile.h";
+#include "SACFile.h"
 
 void read_test();
 
@@ -32,7 +32,7 @@ void read_test() {
     data = sf1.getData();
     std::cout << data[3] << std::endl;
     delete data;
-    std::cout << sf0.getString(KSTNM);
+    std::cout << sf0.getString(header::KSTNM);
     //test();
 
    /* for (int i = 0; i <1; i++)

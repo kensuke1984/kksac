@@ -3,7 +3,7 @@
  *
  * Created on: 2019/11/18
  * Author: kensuke
- * version 0.0.1
+ * version 0.0.2
  */
 
 #include <iostream>
@@ -27,260 +27,260 @@ SACHeader::~SACHeader() {
 bool SACHeader::getBoolean(header bool_header) {
     switch (bool_header)
     {
-    case LEVEN:
+    case header::LEVEN:
         return leven;
-    case LPSPOL:
+    case header::LPSPOL:
         return lpspol;
-    case LOVROK:
+    case header::LOVROK:
         return lovrok;
-    case LCALDA:
+    case header::LCALDA:
         return lcalda;
     default:
-        throw std::invalid_argument(bool_header + " is not a header for bool.");
+        throw std::invalid_argument("Invalid header for bool.");
     }
 }
 
 int SACHeader::getEnumerated(header enum_header) {
     switch (enum_header)
     {
-    case IFTYPE:
+    case header::IFTYPE:
         return iftype;
-    case IDEP:
+    case header::IDEP:
         return idep;
-    case IZTYPE:
+    case header::IZTYPE:
         return iztype;
-    case IINST:
+    case header::IINST:
         return iinst;
-    case ISTREG:
+    case header::ISTREG:
         return istreg;
-    case IEVREG:
+    case header::IEVREG:
         return ievreg;
-    case IEVTYP:
+    case header::IEVTYP:
         return ievtyp;
-    case IQUAL:
+    case header::IQUAL:
         return iqual;
-    case ISYNTH:
+    case header::ISYNTH:
         return isynth;
-    case IMAGTYP:
+    case header::IMAGTYP:
         return imagtyp;
-    case IMAGSRC:
+    case header::IMAGSRC:
         return imagsrc;
     default:
-        throw std::invalid_argument(enum_header + " is not a header for enumerated.");
+        throw std::invalid_argument("Invalid header for enumerated.");
     }
 }
 
 double SACHeader::getValue(header value_header) {
     switch (value_header) {
-    case DELTA:
+    case header::DELTA:
         return delta;
-    case DEPMIN:
+    case header::DEPMIN:
         return depmin;
-    case DEPMAX:
+    case header::DEPMAX:
         return depmax;
-    case SCALE:
+    case header::SCALE:
         return scale;
-    case ODELTA:
+    case header::ODELTA:
         return odelta;
-    case B:
+    case header::B:
         return b;
-    case E:
+    case header::E:
         return e;
-    case O:
+    case header::O:
         return o;
-    case A:
+    case header::A:
         return a;
-    case T0:
+    case header::T0:
         return t0;
-    case T1:
+    case header::T1:
         return t1;
-    case T2:
+    case header::T2:
         return t2;
-    case T3:
+    case header::T3:
         return t3;
-    case T4:
+    case header::T4:
         return t4;
-    case T5:
+    case header::T5:
         return t5;
-    case T6:
+    case header::T6:
         return t6;
-    case T7:
+    case header::T7:
         return t7;
-    case T8:
+    case header::T8:
         return t8;
-    case T9:
+    case header::T9:
         return t9;
-    case F:
+    case header::F:
         return f;
-    case RESP0:
+    case header::RESP0:
         return resp0;
-    case RESP1:
+    case header::RESP1:
         return resp1;
-    case RESP2:
+    case header::RESP2:
         return resp2;
-    case RESP3:
+    case header::RESP3:
         return resp3;
-    case RESP4:
+    case header::RESP4:
         return resp4;
-    case RESP5:
+    case header::RESP5:
         return resp5;
-    case RESP6:
+    case header::RESP6:
         return resp6;
-    case RESP7:
+    case header::RESP7:
         return resp7;
-    case RESP8:
+    case header::RESP8:
         return resp8;
-    case RESP9:
+    case header::RESP9:
         return resp9;
-    case STLA:
+    case header::STLA:
         return stla;
-    case STLO:
+    case header::STLO:
         return stlo;
-    case STEL:
+    case header::STEL:
         return stel;
-    case STDP:
+    case header::STDP:
         return stdp;
-    case EVLA:
+    case header::EVLA:
         return evla;
-    case EVLO:
+    case header::EVLO:
         return evlo;
-    case EVEL:
+    case header::EVEL:
         return evel;
-    case EVDP:
+    case header::EVDP:
         return evdp;
-    case MAG:
+    case header::MAG:
         return mag;
-    case USER0:
+    case header::USER0:
         return user0;
-    case USER1:
+    case header::USER1:
         return user1;
-    case USER2:
+    case header::USER2:
         return user2;
-    case USER3:
+    case header::USER3:
         return user3;
-    case USER4:
+    case header::USER4:
         return user4;
-    case USER5:
+    case header::USER5:
         return user5;
-    case USER6:
+    case header::USER6:
         return user6;
-    case USER7:
+    case header::USER7:
         return user7;
-    case USER8:
+    case header::USER8:
         return user8;
-    case USER9:
+    case header::USER9:
         return user9;
-    case DIST:
+    case header::DIST:
         return dist;
-    case AZ:
+    case header::AZ:
         return az;
-    case BAZ:
+    case header::BAZ:
         return baz;
-    case GCARC:
+    case header::GCARC:
         return gcarc;
-    case DEPMEN:
+    case header::DEPMEN:
         return depmen;
-    case CMPAZ:
+    case header::CMPAZ:
         return cmpaz;
-    case CMPINC:
+    case header::CMPINC:
         return cmpinc;
-    case XMINIMUM:
+    case header::XMINIMUM:
         return xminimum;
-    case XMAXIMUM:
+    case header::XMAXIMUM:
         return xmaximum;
-    case YMINIMUM:
+    case header::YMINIMUM:
         return yminimum;
-    case YMAXIMUM:
+    case header::YMAXIMUM:
         return ymaximum;
     default:
-        throw std::invalid_argument(value_header + " is not a header for double values.");
+        throw std::invalid_argument("Invalid header for double values.");
     }
 }
 int SACHeader::getInt(header int_header) {
     switch (int_header) {
-    case NZYEAR:
+    case header::NZYEAR:
         return nzyear;
-    case NZJDAY:
+    case header::NZJDAY:
         return nzjday;
-    case NZHOUR:
+    case header::NZHOUR:
         return nzhour;
-    case NZMIN:
+    case header::NZMIN:
         return nzmin;
-    case NZSEC:
+    case header::NZSEC:
         return nzsec;
-    case NZMSEC:
+    case header::NZMSEC:
         return nzmsec;
-    case NVHDR:
+    case header::NVHDR:
         return nvhdr;
-    case NORID:
+    case header::NORID:
         return norid;
-    case NEVID:
+    case header::NEVID:
         return nevid;
-    case NPTS:
+    case header::NPTS:
         return npts;
-    case NWFID:
+    case header::NWFID:
         return nwfid;
-    case NXSIZE:
+    case header::NXSIZE:
         return nxsize;
-    case NYSIZE:
+    case header::NYSIZE:
         return nysize;
     default:
-        throw std::invalid_argument(int_header + " is not a header for int values.");
+        throw std::invalid_argument("Invalid header for int values.");
     }
 }
 
 std::string SACHeader::getString(header str_header) {
     switch (str_header) {
-    case KSTNM:
+    case header::KSTNM:
         return kstnm;
-    case KEVNM:
+    case header::KEVNM:
         return kevnm;
-    case KHOLE:
+    case header::KHOLE:
         return khole;
-    case KO:
+    case header::KO:
         return ko;
-    case KA:
+    case header::KA:
         return ka;
-    case KT0:
+    case header::KT0:
         return kt0;
-    case KT1:
+    case header::KT1:
         return kt1;
-    case KT2:
+    case header::KT2:
         return kt2;
-    case KT3:
+    case header::KT3:
         return kt3;
-    case KT4:
+    case header::KT4:
         return kt4;
-    case KT5:
+    case header::KT5:
         return kt5;
-    case KT6:
+    case header::KT6:
         return kt6;
-    case KT7:
+    case header::KT7:
         return kt7;
-    case KT8:
+    case header::KT8:
         return kt8;
-    case KT9:
+    case header::KT9:
         return kt9;
-    case KF:
+    case header::KF:
         return kf;
-    case KUSER0:
+    case header::KUSER0:
         return kuser0;
-    case KUSER1:
+    case header::KUSER1:
         return kuser1;
-    case KUSER2:
+    case header::KUSER2:
         return kuser2;
-    case KCMPNM:
+    case header::KCMPNM:
         return kcmpnm;
-    case KNETWK:
+    case header::KNETWK:
         return knetwk;
-    case KDATRD:
+    case header::KDATRD:
         return kdatrd;
-    case KINST:
+    case header::KINST:
         return kinst;
     default:
-        throw std::invalid_argument(str_header + " is not a header for int values.");
+        throw std::invalid_argument( "Invalid a header for int values.");
     }
- }
+}
 
 void SACHeader::read() {
     const char* sacfile = file_path.c_str();

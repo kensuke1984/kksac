@@ -9,7 +9,7 @@
 #ifndef SACHEADER_H_
 #define SACHEADER_H_
 #include<fstream>
-enum header {
+enum class header : unsigned char {
     DELTA, // 0
     /*
     * Minimum value of dependent variable.
